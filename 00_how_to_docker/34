@@ -1,0 +1,2 @@
+1) Virtual box -> remove Aiur
+2) docker-machine rm Aiur

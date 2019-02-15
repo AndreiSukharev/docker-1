@@ -1,0 +1,6 @@
+docker-machine ssh Char mkdir /home/flask
+docker-machine scp app.py Char:/home/flask
+
+docker run --name Abathur -v /home/flask:/root -p 3000:3000 -dit python:2-slim
+docker exec Abathur pip install flask
+docker exec -e FLASK_APP=/root/app.py Abathur flask run -h 0.0.0.0 -p 3000

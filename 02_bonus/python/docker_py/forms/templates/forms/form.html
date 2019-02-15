@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School21</title>
+</head>
+<body>
+
+    <h2>Docker-1 project: bbashiri</h2>
+    <h3>Give us your feedback for docker project</h3>
+
+
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label for="feedback-text"> Feedback</label>
+        <input id="feedback-text" type="text" name="text" minlength="3" maxlength="10" required>
+
+        <br>
+
+        <label for="feedback-grade"> Grade</label>
+        <input id="feedback-grade" type="number" name="grade" required>
+
+        <br>
+
+        <label for="feedback-image"> Photo</label>
+        <input id="feedback-image" type="file" name="image" required>
+
+        <br>
+
+        <input id="feedback-submit" type="submit">
+
+        <br>
+
+        {{text}}
+        {{grade}}
+
+
+    </form>
+
+</body>
+</html>
